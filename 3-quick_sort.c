@@ -25,15 +25,15 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 {
 	int pivot = array[high];
 	int i = low - 1;
- 	int j;
+	int j;
 
 	for (j = low; j <= high - 1; j++)
 	{
 	if (array[j] < pivot)
 	{
 	i++;
- 	if (i != j)
-            {
+	if (i != j)
+	{
 	swap(&array[i], &array[j]);
 	print_array(array, size);
 	}
@@ -57,7 +57,7 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 void quicksort(int *array, int low, int high, size_t size)
 {
 	int pi;
-	
+
 	if (low < high)
 	{
 	pi = lomuto_partition(array, low, high, size);
