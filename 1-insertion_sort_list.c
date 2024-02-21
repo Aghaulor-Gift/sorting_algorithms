@@ -1,14 +1,14 @@
 #include "sort.h"
 
 /**
- * insertion_sort_list - Sorts a doubly linked list of integers in ascending order
- *                       using the Insertion sort algorithm.
+ * insertion_sort_list - Sorts a doubly linked list of integers in
+ *			ascending order using the Insertion sort algorithm.
  * @list: Pointer to the head of the doubly linked list
  */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current;
-	
+
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 	return;
 
@@ -18,7 +18,7 @@ void insertion_sort_list(listint_t **list)
 	{
 	listint_t *temp = current->prev;
 
-        while (temp != NULL && temp->n > current->n)
+	while (temp != NULL && temp->n > current->n)
 	{
 
 	if (temp->prev != NULL)
